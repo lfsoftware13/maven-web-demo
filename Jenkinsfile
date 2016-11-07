@@ -3,6 +3,9 @@ node {
         git 'https://github.com/lfsoftware13/TestJenkins.git'
     }
     stage('QA') {
+        sh 'pwd'
+        sh 'echo $PATH'
+        sh 'echo $SHELL'
         sh 'sonar-scanner'
     }
     stage('build') {
